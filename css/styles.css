@@ -1,21 +1,22 @@
 @import "../css/variables.css";
 
 body{
-    display: flex;
     position: relative;
     box-sizing: border-box;
     overflow-x: hidden;
 }
 
-
+*{
+    outline: 3px solid black;
+}
 
 
 /* PARALLAX STYLES */
 
 .parallax-scene{
-    display: flex;
     position: relative;
     height: 100vh;
+    overflow: hidden;
     
 }
 
@@ -23,6 +24,7 @@ body{
 .layer {
   position: absolute;
   bottom: 0;
+  left: 17%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +34,6 @@ body{
 .layer--fg {
   z-index: 3;
 }
-
 
 .layer--mid {
   z-index: 2;
@@ -44,12 +45,32 @@ body{
 
 /* NAV STYLES */
 
-
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
 ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 2rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+    background-color: aqua;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 1rem;
+}
 
 
 
