@@ -4,6 +4,7 @@ body{
     position: relative;
     box-sizing: border-box;
     overflow-x: hidden;
+    margin: 0;
 }
 
 *{
@@ -43,6 +44,15 @@ body{
   z-index: 1;
 }
 
+
+h1{
+    font-family: var(--header-font);
+    font-size: var(--Sizes__3XL);
+    text-align: center;
+    margin-top: var(--Spacing5XL);
+}
+
+
 /* NAV STYLES */
 
 .nav-bar{
@@ -77,5 +87,19 @@ a{
 /* SECTIONS */
 
 #section-1{
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    margin: var(--Spacing3XL);
+}
+
+
+
+
+.about-container{
+    font-family: var(--body-font);
+    font-size: var(--Sizes__L);
+    font-weight:600;
+    width: 50%;
+    margin: var(--Spacing3XL);
 }

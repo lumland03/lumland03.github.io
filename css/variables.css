@@ -1,0 +1,44 @@
+
+/* .winky-rough-<uniquifier> {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+:root{
+    --header-font: "Winky Rough", sans-serif;
+    --body-font: "Indie Flower", cursive;
+    --green-2: #126328;
+    --green-1: #139C38;
+    --green-3: #0E3B19;
+}
+
+:root{
+  --Sizes__XS:4px;
+  --Sizes__S:8px;
+  --Sizes__M:16px;
+  --Sizes__L:24px;
+  --Sizes__XL:32px;
+  --Sizes__2XL:48px;
+  --Sizes__3XL:56px;
+}
+
+:root{
+  --SpacingXS:0.5rem;
+  --SpacingS:1rem;
+  --SpacingM:1.5rem;
+  --SpacingL:2rem;
+  --Spacing2XL:2.5rem;
+  --Spacing3XL:3rem;
+  --Spacing4XL:4rem;
+  --Spacing5XL:6rem;
+}
