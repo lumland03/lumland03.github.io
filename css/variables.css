@@ -17,9 +17,11 @@
 :root{
     --header-font: "Winky Rough", sans-serif;
     --body-font: "Indie Flower", cursive;
+    --main-color: #B7FC6F;
     --green-2: #126328;
     --green-1: #139C38;
     --green-3: #0E3B19;
+    --green-4: #99ED42;
 }
 
 :root{

@@ -5,6 +5,7 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     margin: 0;
+    background-color: var(--main-color);
 }
 
 *{
@@ -18,14 +19,19 @@ body{
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background-image: url(/assets/images/beautiful-scenery-emerald-lake-yoho-national-park-british-columbia-canada.jpg);
+    background-position: 5%;
+    background-size: cover;
     
 }
 
+/* .para-container{
+} */
 
 .layer {
   position: absolute;
   bottom: 0;
-  left: 17%;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,17 +55,30 @@ h1{
     font-family: var(--header-font);
     font-size: var(--Sizes__3XL);
     text-align: center;
+    margin: auto;
+    padding: var(--SpacingL);
     margin-top: var(--Spacing5XL);
+    background-color: rgba(255, 255, 255, .3);
+    width: fit-content;
+    border-radius: 10px;
 }
 
 
 /* NAV STYLES */
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
 
 .nav-bar{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+   
+
 }
 
 ul{
@@ -75,11 +94,11 @@ ul{
 a{
     text-decoration: none;
     color: black;
-    background-color: aqua;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 1rem;
+    background-color: var(--green-4);
+    padding: var(--SpacingS);
+    padding-left: var(--SpacingL);
+    padding-right: var(--SpacingL);
+    margin: var(--SpacingS);
 }
 
 
@@ -88,9 +107,10 @@ a{
 
 #section-1{
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    margin: var(--Spacing3XL);
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    margin: var(--Spacing5XL);
 }
 
 
@@ -100,6 +120,8 @@ a{
     font-weight:600;
     width: 50%;
     margin: var(--Spacing3XL);
+    background-color: white;
+    padding: var(--Spacing5XL)
 }
 
 
@@ -108,11 +130,28 @@ a{
 
 
 #section-2{
-    margin-top: var(--Spacing2XL)
+    margin-top: var(--Spacing2XL);
+    height: 75vh;
+    background-color: var(--green-2);
 }
 
 
-.site-carousel{
+
+h2{
+    font-family: var(--header-font);
+    font-size: var(--Sizes__XL);
+    text-align: center;
+    
+}
+
+#section-2 h2{
+    margin: var(--Spacing3XL);
+    padding-top: var(--Spacing2XL)
+    
+}
+
+
+.sites{
     display: flex;
     justify-content: space-evenly;
     
@@ -125,7 +164,93 @@ a{
     margin: auto;
 }
 
-.projects a{
+.projects p{
+    justify-content: center;
     text-align: center;
     margin: auto;
+    font-family: var(--header-font);
+    font-size: var(--Sizes__XL);
+}
+
+
+
+
+/* footer */
+
+footer{
+    margin-top: var(--Spacing2XL);
+    padding: var(--Spacing5XL);
+    display: flex;
+    justify-content: center;
+    background-color: var(--green-3);
+}
+
+.quicklinks{
+    font-family: var(--body-font);
+    font-size: var(--Sizes__L);
+}
+
+
+
+
+
+/* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES */
+/* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES */
+/* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES *//* MOBILE STYLES */
+
+
+
+
+@media (max-width: 900px) {
+
+    .parallax-scene {
+        height: 75vh;
+    }
+
+    h1 {
+        padding: var(--SpacingS);
+        margin-top: var(--Spacing3XL);
+    
+    }
+
+    a {
+        padding: var(--SpacingXS) var(--SpacingXS);
+        margin: var(--SpacingXS);
+    }
+
+    #section-1 {
+        height: 75vh;
+    }
+
+    .about-container {
+        width: 95%; 
+        padding: var(--Spacing3XL);
+    }
+
+    #section-2 {
+        height: auto; 
+        padding-bottom: var(--Spacing2XL);
+    }
+
+    #section-2 p{
+        font-size: var(--Sizes__L);
+    }
+
+    .projects {
+        width: 200px;
+        height: auto; 
+    }
+
+    
+    .projects img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer{
+    margin-top: var(--SpacingL);
+    padding: var(--Spacing2XL);
+    }
+
+    
 }
