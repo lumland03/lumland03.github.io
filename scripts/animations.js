@@ -12,7 +12,7 @@ gsap.to(".layer-bg", {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
-    markers: true,
+  
    
   }
 });
@@ -24,7 +24,7 @@ gsap.to('.layer-mid', {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
-    markers: true,
+    
 
 }
 });
@@ -36,7 +36,7 @@ gsap.to('.layer-fg', {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
-    markers: true,
+   
     
 }
 });
