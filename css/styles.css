@@ -102,6 +102,7 @@ a{
     padding-left: var(--SpacingL);
     padding-right: var(--SpacingL);
     margin: var(--SpacingS);
+    font-family: var(--header-font);
 }
 
 
@@ -193,6 +194,9 @@ footer{
     font-size: var(--Sizes__L);
 }
 
+footer p{
+    text-align: center;
+}
 
 
 
