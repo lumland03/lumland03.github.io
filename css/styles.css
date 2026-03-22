@@ -12,6 +12,9 @@ body{
     outline: 3px solid black;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* PARALLAX STYLES */
 
@@ -201,10 +204,10 @@ footer{
 
 
 
-@media (min-width: 350px) {
+@media (max-width: 900px) {
 
     .parallax-scene {
-        height: 75vh;
+        height: 75svh;
     }
 
     h1 {
@@ -213,13 +216,25 @@ footer{
     
     }
 
+    ul{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+
+
     a {
         padding: var(--SpacingXS) var(--SpacingXS);
         margin: var(--SpacingXS);
     }
 
     #section-1 {
-        height: 75vh;
+        height: 75svh;
     }
 
     .about-container {
