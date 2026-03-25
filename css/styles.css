@@ -66,6 +66,20 @@ h1{
     border-radius: 10px;
 }
 
+h2{
+    font-family: var(--header-font);
+    font-size: var(--Sizes__2XL);
+    text-align: center; 
+}
+
+h3{
+    font-family: var(--header-font);
+    font-size: var(--Sizes__XL);
+    text-align: center; 
+}
+
+
+
 
 /* NAV STYLES */
 nav{
@@ -164,12 +178,6 @@ a{
 
 
 
-h2{
-    font-family: var(--header-font);
-    font-size: var(--Sizes__2XL);
-    text-align: center;
-    
-}
 
 #section-2 h2{
     margin: var(--Spacing3XL);
