@@ -1,0 +1,41 @@
+:root{
+    --blue-1: #3466AF;
+    --blue-2: #21386E;
+    --blue-3: #1D2C5E;
+    --red-1: #F00;
+    --red-2: #C00;
+    --yellow-1: #FFCB05;
+    --yellow-2: #C7A008;
+    --grey-1: #CFCFCF;
+    --grey-2: #9E9E9E;
+    --grey-3: #6E6E6E;
+
+}
+
+
+
+
+
+
+
+
+:root{
+  --Sizes__XS:4px;
+  --Sizes__S:8px;
+  --Sizes__M:16px;
+  --Sizes__L:24px;
+  --Sizes__XL:32px;
+  --Sizes__2XL:48px;
+  --Sizes__3XL:56px;
+}
+
+:root{
+  --SpacingXS:0.5rem;
+  --SpacingS:1rem;
+  --SpacingM:1.5rem;
+  --SpacingL:2rem;
+  --Spacing2XL:2.5rem;
+  --Spacing3XL:3rem;
+  --Spacing4XL:4rem;
+  --Spacing5XL:6rem;
+}
