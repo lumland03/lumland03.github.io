@@ -16,6 +16,16 @@ const genSelect    = document.getElementById('generation-filter');
 const detailCache = new Map(); // id  -> { id, name, sprite, types, evolutionStage }
 const chainCache  = new Map(); // url -> chain object (shared across an evo family)
 
+const MAX_TEAM_SLOTS = 6;
+const teamSlots = new Array(MAX_TEAM_SLOTS).fill(null);
+
+// Adjust selector to match your actual slot elements
+const slotElements = Array.from(document.querySelectorAll('.pokeslot')).slice(0, MAX_TEAM_SLOTS);
+
+function firstEmptySlotIndex() {
+    return teamSlots.findIndex(slot => slot === null);
+}
+
 let allPokemon = []; // [{ name, url, id }]
 
 // ── HELPERS ────────────────────────────────────────────────
@@ -45,6 +55,52 @@ function detectStage(chain, name) {
     }
     return 'base';
 }
+
+function renderTeamSlots() {
+    slotElements.forEach((slotEl, index) => {
+        const pokemon = teamSlots[index];
+
+        if (!pokemon) {
+            slotEl.classList.remove('filled');
+            slotEl.dataset.pokemonId = '';
+            slotEl.innerHTML = `
+                <div class="slot-placeholder">
+                    <span>Slot ${index + 1}</span>
+                </div>
+            `;
+            return;
+        }
+
+        const types = pokemon.types
+            .map(t => `<span class="type-badge type-${t}">${t}</span>`)
+            .join('');
+
+        slotEl.classList.add('filled');
+        slotEl.dataset.pokemonId = String(pokemon.id);
+        slotEl.innerHTML = `
+            <img class="slot-img" src="${pokemon.sprite}" alt="${pokemon.name}">
+            <p class="slot-name">${pokemon.name}</p>
+            <div class="slot-types">${types }</div>
+        `;
+    });
+}
+
+function addPokemonToNextSlot(pokemonData) {
+    const emptyIndex = firstEmptySlotIndex();
+    if (emptyIndex === -1) return; // all full
+    teamSlots[emptyIndex] = pokemonData;
+    renderTeamSlots();
+}
+
+function clearSlot(index) {
+    if (index < 0 || index >= teamSlots.length) return;
+    if (!teamSlots[index]) return;
+    teamSlots[index] = null;
+    renderTeamSlots();
+}
+
+
+
 
 // ── FETCHING ───────────────────────────────────────────────
 
@@ -84,17 +140,24 @@ function cardHTML(data) {
     const types = data.types
         .map(t => `<span class="type-badge type-${t}">${t}</span>`)
         .join('');
+
     return `
-        <img class="poke-card-img" src="${data.sprite}" alt="${data.name}" loading="lazy">
-        <p class="poke-card-name">${data.name}</p>
-        <div class="poke-card-types">${types}</div>`;
+        <div class="poke-card-inner">
+            <img class="poke-card-img" src="${data.sprite}" alt="${data.name}" loading="lazy">
+            <p class="poke-card-name">${data.name}</p>
+            <div class="poke-card-types">${types}</div>
+        </div>
+    `;
 }
 
 function skeletonHTML(name) {
     return `
-        <div class="poke-card-img skeleton"></div>
-        <p class="poke-card-name">${name}</p>
-        <div class="poke-card-types"></div>`;
+        <div class="poke-card-inner">
+            <div class="poke-card-img skeleton"></div>
+            <p class="poke-card-name">${name}</p>
+            <div class="poke-card-types"></div>
+        </div>
+    `;
 }
 
 function updateCard(id) {
@@ -204,4 +267,34 @@ typeSelect.addEventListener('change',  applyFilters);
 evoSelect.addEventListener('change',   applyFilters);
 genSelect.addEventListener('change',   applyFilters);
 
+
+grid.addEventListener('click', async (event) => {
+    const card = event.target.closest('.poke-card');
+    if (!card) return;
+
+    const id = parseInt(card.dataset.id, 10);
+    if (!id) return;
+
+    const data = detailCache.get(id) || await fetchDetail(id);
+    addPokemonToNextSlot(data);
+});
+
+slotElements.forEach((slotEl, index) => {
+    slotEl.addEventListener('click', () => {
+        clearSlot(index);
+    });
+});
+
+renderTeamSlots();
+
 init();
+
+
+// BREA
+
+
+
+
+
+
+

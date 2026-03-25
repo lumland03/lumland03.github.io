@@ -150,6 +150,92 @@ p{
 }
 
 
+/* JS TEMPLATE STYLES */
+
+
+/* 80% page width wrapper for the grid section */
+.content-grid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Each card spans 3 columns on desktop => 4 cards per row */
+.poke-card {
+    grid-column: span 2;
+    border: 1px solid var(--yellow-2);
+    border-radius: 12px;
+    background: var(--yellow-1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition-duration: 300ms;
+}
+
+.poke-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--yellow-2);
+    scale: 1.05;
+    transition-duration: 300ms;
+}
+
+
+
+.poke-card-inner {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.poke-card-img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.poke-card-name {
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.poke-card-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+/* Responsive spans */
+@media (max-width: 1100px) {
+    .poke-card {
+        grid-column: span 4; /* 3 cards/row */
+    }
+}
+
+@media (max-width: 800px) {
+    .content-grid {
+        width: 92%;
+    }
+
+    .poke-card {
+        grid-column: span 6; /* 2 cards/row */
+    }
+}
+
+@media (max-width: 520px) {
+    .poke-card {
+        grid-column: span 12; /* 1 card/row */
+    }
+}
+
+
+
+
 
 /* Footer */
 
