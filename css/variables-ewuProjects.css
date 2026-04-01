@@ -1,1 +1,31 @@
-@import "../css/variables-ewuProjects.css";
+
+:root{
+    --primary-color: #b7142e;
+    --secondary-color:#931026;
+    --surface-color: #dddddd;
+    --text-colorDark: #1a1a1a;
+    --text-colorLight: #f2f2f2;
+    --font-family-head: "Archivo Black", sans-serif;
+    --font-family-body: "Dosis", sans-serif;
+}
+
+:root{
+  --Sizes__XS:4px;
+  --Sizes__S:8px;
+  --Sizes__M:16px;
+  --Sizes__L:24px;
+  --Sizes__XL:32px;
+  --Sizes__2XL:48px;
+  --Sizes__3XL:56px;
+}
+
+:root{
+  --SpacingXS:0.5rem;
+  --SpacingS:1rem;
+  --SpacingM:1.5rem;
+  --SpacingL:2rem;
+  --SpacingXL:2.5rem;
+  --Spacing2XL:3rem;
+  --Spacing3XL:4rem;
+  --Spacing4XL:6rem;
+}

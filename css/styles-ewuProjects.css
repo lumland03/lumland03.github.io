@@ -1,0 +1,68 @@
+@import "../css/variables-ewuProjects.css";
+
+
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.dosis{
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: var(--SpacingL);
+    color: var(--text-colorLight);
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-colorLight);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: var(--SpacingM);
+    display: flex;
+    gap: var(--SpacingL);
+    justify-content: flex-end;
+    font-family: var(--font-family-body);
+    font-size: var(--Sizes__L);
+}
+
+
+main{
+    padding: var(--SpacingL);
+    background-color: var(--surface-color);
+    width: 90%;
+}
+
+
+
+
+h1{
+    font-family: var(--font-family-head);
+    font-size: var(--Sizes__3XL);
+    margin: var(--SpacingL) 0 var(--SpacingM) 0;
+    color: var(--text-colorDark);
+}
