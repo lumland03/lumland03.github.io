@@ -2,11 +2,13 @@
 :root{
     --primary-color: #b7142e;
     --secondary-color:#931026;
-    --surface-color: #dddddd;
+    --surface-color: #efefef;
     --text-colorDark: #1a1a1a;
     --text-colorLight: #f2f2f2;
+    --text-colorBody: #1a1a1a;
     --font-family-head: "Archivo Black", sans-serif;
     --font-family-body: "Dosis", sans-serif;
+
 }
 
 :root{
@@ -17,6 +19,7 @@
   --Sizes__XL:32px;
   --Sizes__2XL:48px;
   --Sizes__3XL:56px;
+  --Sizes__4XL:64px;
 }
 
 :root{
@@ -28,4 +31,5 @@
   --Spacing2XL:3rem;
   --Spacing3XL:4rem;
   --Spacing4XL:6rem;
+  --SpacingStupid:10rem;
 }
