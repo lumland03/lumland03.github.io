@@ -15,6 +15,7 @@ if (savedTheme) {
 
 const themeToggle = document.querySelector('.theme-toggle');
 const dropdownContent = document.querySelector('.dropdown-content');
+const dropdownContainer = document.querySelector('.dropdown');
 const lightToggle = document.querySelector('.light') 
 const darkToggle = document.querySelector('.dark') 
 const systemToggle = document.querySelector('.system') 
@@ -62,8 +63,7 @@ function setTheme(theme) {
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(e) {
-  const dropdown = document.querySelector('.dropdown-content');
-  if (!dropdown.contains(e.target)) {
+  if (!dropdownContainer.contains(e.target)) {
     dropdownContent.classList.remove('active');
   }
 });

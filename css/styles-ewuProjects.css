@@ -41,7 +41,7 @@ body{
 header{
     background-color: var(--primary-color);
     margin: 0;
-    padding: var(--SpacingL);
+    padding: var(--SpacingM);
     color: var(--text-colorLight);
     position: sticky;
     top:0;
@@ -69,6 +69,24 @@ ul a{
     font-size: var(--Sizes__L);
 }
 
+
+header button{
+    background-color: transparent;
+    border: 2px solid var(--text-colorLight);
+    color: var(--text-colorLight);
+    padding: var(--SpacingS) var(--SpacingM);
+    border-radius: var(--Sizes__S);
+    cursor: pointer;
+    font-family: var(--font-family-body);
+    font-size: var(--Sizes__L);
+}
+
+.dropdown-content button{
+    background-color: var(--primary-color);
+    border: none;
+    padding: var(--Sizes__M);
+}
+
 .dropdown{
     position: relative;
     font-family: var(--font-family-body);
@@ -76,17 +94,20 @@ ul a{
 }
 
 .dropdown-content.active {
-display: block;
-}
-
-
-.dropdown-content{
-    /* display: none; */
+    display: block;
     position: absolute;
+    border: 2px solid var(--text-colorLight);
+    background-color: var(--primary-color);
     border-radius: var(--Sizes__S);
     top: 100%;
     left: 0;
     margin: var(--SpacingM) 0 0 0;
+}
+
+
+.dropdown-content{
+    display: none;
+  
     
 }
 
@@ -130,17 +151,23 @@ section{
 
 
 .projects{
-    font-family: var(--font-family-body);
-    font-size: var(--Sizes__L);
     background-color: var(--secondary-color);
     padding: var(--SpacingL);
     border-radius: var(--Sizes__S);
 
 }
 
+.projects p{
+    color: var(--text-colorLight);
+    font-family: var(--font-family-body);
+    font-size: var(--Sizes__M);
+}
+
 .projects a{
     color: var(--text-colorLight);
     text-decoration: none;
+    font-family: var(--font-family-head);
+    font-size: var(--Sizes__L);
 }
 
 footer{
