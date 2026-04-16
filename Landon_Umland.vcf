@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Landon Umland
+N:Umland;Landon;;;
+TITLE:Design Engineer
+EMAIL;TYPE=INTERNET:lumland2003@gmail.com
+URL:mothcentral.com
+X-SOCIALPROFILE;TYPE=github:https://github.com/lumland03
+ADR;TYPE=WORK:;;;Cheney;;USA
+END:VCARD
